@@ -34,6 +34,7 @@ class HappyHourList extends React.Component {
         var mins = time.getMinutes();
         var currentTime = hrs.toString() + mins.toString();
         currentTime = Number(currentTime);
+        console.log(currentTime ,'time', startTime)
 
         if(currentTime >= startTime && currentTime <= endTime) {
           return true;
