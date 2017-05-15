@@ -10179,6 +10179,7 @@ var HappyHourList = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
 
       var startTime = this.convertTime(this.props.bar.start);
       var endTime = this.convertTime(this.props.bar.end);
@@ -10197,7 +10198,9 @@ var HappyHourList = function (_React$Component) {
         { className: 'BarListItem' },
         _react2.default.createElement(
           'h3',
-          { className: 'BarNameHeader' },
+          { className: 'BarNameHeader', onClick: function onClick(e) {
+              return _this2.props.userID !== '' ? _this2.props.addUserFave({ userID: _this2.props.userID, barID: _this2.props.bar.id }) : null;
+            } },
           this.props.bar.name
         ),
         _react2.default.createElement(
